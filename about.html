@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>SINASSASS</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="Free HTML Templates" name="keywords" />
+    <meta content="Free HTML Templates" name="description" />
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+
+    <link href="css/main.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/blog.css" rel="stylesheet" />
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, 0.1);
+        border: solid rgba(0, 0, 0, 0.15);
+        border-width: 1px 0;
+        box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
+          inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -0.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Spinner Start -->
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div class="spinner"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <!-- 
+  <div class="container-fluid bg-dark px-5 d-none d-lg-block">
+      <div class="row gx-0">
+        <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+          <div class="d-inline-flex align-items-center" style="height: 45px">
+            <small class="me-3 text-light"
+              ><i class="fa fa-map-marker-alt me-2"></i>123 Street, New York,
+              USA</small
+            >
+            <small class="me-3 text-light"
+              ><i class="fa fa-phone-alt me-2"></i>+012 345 6789</small
+            >
+            <small class="text-light"
+              ><i class="fa fa-envelope-open me-2"></i>info@example.com</small
+            >
+          </div>
+        </div>
+        <div class="col-lg-4 text-center text-lg-end">
+          <div class="d-inline-flex align-items-center" style="height: 45px">
+            <a
+              class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
+              href=""
+              ><i class="fab fa-twitter fw-normal"></i
+            ></a>
+            <a
+              class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
+              href=""
+              ><i class="fab fa-facebook-f fw-normal"></i
+            ></a>
+            <a
+              class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
+              href=""
+              ><i class="fab fa-linkedin-in fw-normal"></i
+            ></a>
+            <a
+              class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
+              href=""
+              ><i class="fab fa-instagram fw-normal"></i
+            ></a>
+            <a
+              class="btn btn-sm btn-outline-light btn-sm-square rounded-circle"
+              href=""
+              ><i class="fab fa-youtube fw-normal"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+-->
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
+        <a href="index.html" class="navbar-brand p-0">
+          <h1 class="m-0">
+            <!-- <i class="fa fa-user-tie me-2"></i> -->
+            SINASSASS
+          </h1>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+        >
+          <span class="fa fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav ms-auto py-0">
+            <a href="index.html" class="nav-item nav-link">Inicio</a>
+            <div class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle active"
+                data-bs-toggle="dropdown"
+                >Sobre Nosotros</a
+              >
+              <div class="dropdown-menu m-0">
+                <a href="about.html" class="dropdown-item">Historia</a>
+                <a href="team.html" class="dropdown-item">Directiva</a>
+              </div>
+            </div>            <a href="feature.html" class="nav-item nav-link">Afíliese</a>
+            <a href="service.html" class="nav-item nav-link">Servicios</a>
+            <!-- <a href="blog.html" class="nav-item nav-link">Noticias</a> -->
+            <!-- <div class="nav-item dropdown">
+              <a href="blog.html" class="nav-item nav-link">Noticias</a>
+
+              <div class="dropdown-menu m-0">
+                <a href="blog.html" class="dropdown-item">Noticias</a>
+                <a href="detail.html" class="dropdown-item">Noticia</a>
+              </div> 
+            </div> -->
+
+            <!-- <div class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                >Pages</a
+              >
+              <div class="dropdown-menu m-0">
+                <a href="price.html" class="dropdown-item">Pricing Plan</a>
+                <a href="feature.html" class="dropdown-item">Our features</a>
+                <a href="team.html" class="dropdown-item">Team Members</a>
+                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                <a href="quote.html" class="dropdown-item">Afíliese</a>
+              </div>
+            </div> -->
+            <a href="document.html" class="nav-item nav-link">Documentos</a>
+            <a href="contact.html" class="nav-item nav-link">Contacto</a>
+          </div>
+          <butaton
+            type="button"
+            class="btn text-primary ms-3"
+            data-bs-toggle="modal"
+            data-bs-target="#searchModal"
+            ><i class="fa fa-search"></i
+          ></butaton>
+          <a href="blog.html" class="btn btn-primary py-2 px-4 ms-3"
+            >Noticias</a
+          >
+        </div>
+      </nav>
+
+      <div
+        class="container-fluid bg-primary py-5 bg-header"
+        style="margin-bottom: 90px"
+      >
+        <div class="row py-5">
+          <div class="col-12 pt-lg-5 mt-lg-5 text-center">
+            <h1 class="display-4 text-white animated zoomIn">Sobre Nosotros</h1>
+            <a href="" class="h5 text-white">Inicio</a>
+            <!-- <i class="far fa-circle text-white px-2"></i> -->
+            <a href="" class="h5 text-white"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Full Screen Search Start -->
+    <div class="modal fade" id="searchModal" tabindex="-1">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content" style="background: rgba(9, 30, 62, 0.7)">
+          <div class="modal-header border-0">
+            <button
+              type="button"
+              class="btn bg-white btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div
+            class="modal-body d-flex align-items-center justify-content-center"
+          >
+            <div class="input-group" style="max-width: 600px">
+              <input
+                type="text"
+                class="form-control bg-transparent border-primary p-3"
+                placeholder="Type search keyword"
+              />
+              <button class="btn btn-primary px-4">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Full Screen Search End -->
+
+    <!--  Start -->
+    <div class="container-fluid py-5 wow fadeInUp" style="text-align: justify;" data-wow-delay="0.1s">
+      <div class="container py-5">
+        <!-- <div class="row g-5">
+          <div class="col-lg-7">
+            <div class="section-title position-relative pb-3 mb-5">
+              <h5 class="fw-bold text-primary text-uppercase">Us</h5>
+              <h1 class="mb-0">
+                The Best IT Solution With 10 Years of Experience
+              </h1>
+            </div>
+            <p class="mb-4">
+              Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor
+              sit. Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem
+              et sit, sed stet no labore lorem sit. Sanctus clita duo justo et
+              tempor eirmod magna dolore erat amet
+            </p>
+            <div class="row g-0 mb-3">
+              <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
+                <h5 class="mb-3">
+                  <i class="fa fa-check text-primary me-3"></i>Award Winning
+                </h5>
+                <h5 class="mb-3">
+                  <i class="fa fa-check text-primary me-3"></i>Professional
+                  Staff
+                </h5>
+              </div>
+              <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
+                <h5 class="mb-3">
+                  <i class="fa fa-check text-primary me-3"></i>24/7 Support
+                </h5>
+                <h5 class="mb-3">
+                  <i class="fa fa-check text-primary me-3"></i>Fair Prices
+                </h5>
+              </div>
+            </div>
+            <div
+              class="d-flex align-items-center mb-4 wow fadeIn"
+              data-wow-delay="0.6s"
+            >
+              <div
+                class="bg-primary d-flex align-items-center justify-content-center rounded"
+                style="width: 60px; height: 60px"
+              >
+                <i class="fa fa-phone-alt text-white"></i>
+              </div>
+              <div class="ps-4">
+                <h5 class="mb-2">Call to ask any question</h5>
+                <h4 class="text-primary mb-0">+012 345 6789</h4>
+              </div>
+            </div>
+            <a
+              href="quote.html"
+              class="btn btn-primary py-3 px-5 mt-3 wow zoomIn"
+              data-wow-delay="0.9s"
+              >Request A Quote</a
+            >
+          </div>
+          <div class="col-lg-5" style="min-height: 500px">
+            <div class="position-relative h-100">
+              <img
+                class="position-absolute w-100 h-100 rounded wow zoomIn"
+                data-wow-delay="0.9s"
+                src="img/about.jpg"
+                style="object-fit: cover"
+              />
+            </div>
+          </div>
+        </div> -->
+
+        <!-- ======= Single Post Content ======= -->
+        <div class="single-post">
+         
+          <div
+            class="section-title text-center position-relative pb-3 mb-5 mx-auto"
+            style="max-width: 600px"
+          >
+            <h1 class="mb-0">Conocé nuestra historia</h1>
+          </div>
+          <p>
+            La creación del SINASSASS constituye un hecho singular en la
+            historia del Seguro Social, ya que los Administradores de
+            Hospitales, Clínicas y Áreas de Salud, tradicionalmente fueron
+            considerados, en su ámbito de competencia, como representantes de la
+            jerarquía institucional
+          </p>
+
+          <p>
+            Esa conceptualización, o forma de ver a los Administradores en los
+            Servicios de Salud, caló como tal y por varias décadas, fue práctica
+            y costumbre que los servidores en esos cargos, no figuraran como
+            militantes en las organizaciones sindicales. En gran medida esta
+            conducta fue justificada por aparente choque de intereses, dado que
+            ante eventuales conflictos laborales locales, el Administrador
+            cumplía un rol de representante patronal, en el binomio
+            patrono-trabajadores, representados estos últimos por los
+            sindicatos. Esa situación fue consolidada como tal y perduró por
+            muchos años, tanto como para afirmar que durante cinco décadas o
+            más, los Administradores de Hospitales y de Clínicas (las Áreas de
+            Salud aparecieron recientemente) no figuraron como militantes en las
+            organizaciones sindicales, hasta que el quince de diciembre del año
+            2007, el SINASSASS rompió ese paradigma.
+          </p>
+          <figure class="my-4">
+            <figcaption>
+              ¿Y cuáles fueron entonces los hechos tan relevantes, capaces de
+              cambiar el rumbo a la historia en tan corto tiempo?.
+            </figcaption>
+          </figure>
+          <p>
+            Es probable que para responder a esa interrogante, baste tan sólo
+            con recurrir a los considerandos que, como justificantes de la
+            creación del SINASSASS, figuran en su acta constitutiva.
+          </p>
+          <p>
+            Importante destacar que, pese al dramático contexto que se encierra
+            en los considerandos transcritos, como antecedente inmediato a la
+            creación del SINASSASS, en sus impulsores siempre estuvo claro que
+            la amenaza mayor estaba recayendo en la propia Caja como
+            Institución, particularmente por el daño irreparable que se estaba
+            causando a su clima organizacional laboral, en franco deterioro de
+            la toma de decisiones que finalmente terminaría perjudicando a los
+            usuarios de los servicios. Por tanto, se consideró que los
+            propósitos y fines de la emergente Organización, debían estar
+            “cobijados” por la defensa de la Institución en primer término y en
+            un segundo plano, los intereses de sus agremiados.
+          </p>
+
+          <br />
+          <br />
+          <h3 class="pb-4 mb-4 fst-italic border-bottom">
+            Razones que motivaron nuestro origen
+          </h3>
+
+          <article class="blog-post">
+            <ol>
+              <li>
+                <p>
+                  Que la Administración de los Hospitales a través de la
+                  historia había sido ejercida por Administradores que, aunque
+                  empíricos en las primeras décadas del Seguro Social, siempre
+                  hubo tras ella, personas que dieron lo mejor de sí y
+                  contribuyeron en gran medida al desarrollo de la Caja
+                  Costarricense de Seguro Social y particularmente, en la
+                  evolución y consolidación del traspaso de Hospitales a la
+                  Caja, como hecho histórico de relevancia singular en la
+                  universalización de nuestro Sistema Hospitalario.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Que, por razones históricas, que encuentran explicación en lo
+                  incipiente de nuestro sistema educativo en la década de los
+                  años cuarenta, cuando el Seguro Social emergió y comenzó a
+                  sentar sus bases hacia lo que tenemos hoy día, la jerarquía de
+                  los Centros Hospitalarios recayó en la figura del Médico, como
+                  el profesional titulado de la época, aunque su formación
+                  curricular, no incluía absolutamente nada de Administración,
+                  disciplina que se desarrollaría posteriormente.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Que, en ese contexto, pese a su condición de subordinado
+                  jerárquico, el Administrador ha sido el guía por excelencia en
+                  la conducción de los procesos administrativos, sirviendo
+                  incluso de respaldo permanente y custodio para que las
+                  acciones y decisiones del jerarca del hospital, fueran a
+                  derecho y tuvieran acierto.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Que tales circunstancias, configuraron el binomio
+                  Director-Administrador, como las instancias de mayor rango
+                  que, en el orden de prioridad señalado, tradicionalmente han
+                  figurado como la cabeza de la organización.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Que con el paso de los años, la disciplina de la
+                  Administración en nuestro medio fue desarrollándose y con
+                  ella, los Administradores de Hospital también fueron
+                  evolucionando hasta profesionalizarse, de manera tal que hoy
+                  día es obligado que todo centro hospitalario tenga al frente
+                  de la Administración a un (a) profesional titulado (a) en el
+                  Campo y en las demás instancias como las Áreas de Salud y
+                  Sucursales, también es común que estén comandadas por
+                  profesionales en el campo de la Administración o en otras
+                  disciplinas de las Ciencias Económicas.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Que a pesar del nivel profesional ostentado y de enarbolar por
+                  muchos años “bandera blanca” con planteamientos sobre temas
+                  diversos de interés Institucional sin ser escuchados ni
+                  atendidos, al menos con respeto por las autoridades superiores
+                  de turno, priva un sentimiento generalizado de menosprecio
+                  para nuestras profesiones y para el rol que cumplimos en
+                  nuestros Centros de Trabajo.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Que los planteamientos para mejorar en nuestras unidades de
+                  trabajo no son atendidos, pero en el momento de un problema
+                  surgido, se nos responsabiliza directamente sin mayor
+                  valoración de las condiciones difíciles y hasta precarias en
+                  algunos casos, como nos corresponde desarrollar nuestras
+                  actividades.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Que la alta incidencia de investigaciones administrativas en
+                  contra de los Administradores de Servicios de Salud con
+                  tendencia más hacia la búsqueda de culpables que a la de
+                  soluciones, han creado un clima de desconfianza y de “terror”,
+                  en el que los trabajadores al frente de la toma de decisiones,
+                  nos sentimos amenazados en todo momento.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Que como consecuencia del menosprecio a nuestras profesiones y
+                  a nuestro rol, no sólo se han visto lesionado nuestros
+                  intereses profesionales, sino también nuestros intereses
+                  económicos, ya que los ingresos de nuestro gremio no han
+                  crecido al mismo ritmo de otros puestos tradicionalmente
+                  considerados homologables y por el contrario, se han creado
+                  diferencias donde no las había y se han ensanchado brechas
+                  salariales que se pretendían reducir, como por ejemplo con los
+                  Directores Generales de los Hospitales.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Que las reiteradas e ingentes gestiones de acercamiento
+                  promovidas durante varios años hacia las instancias superiores
+                  de la Institución, para propiciar un diálogo abierto y
+                  constructivo que permitiera conciliar intereses, lejos de dar
+                  resultados positivos, acrecentó el sentimiento de displicencia
+                  para con nuestra profesión y para el rol que cumplimos en
+                  nuestras unidades de trabajo.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Que al no tener apertura de los niveles superiores para
+                  dirimir y resolver la problemática atinente de nuestras
+                  Unidades y del gremio, se ha estimado necesario la
+                  conformación de un sindicato que, amparado por el fuero
+                  sindical y por el respaldo de acuerdos y organizaciones
+                  internacionales afines, nos permita acceder a los espacios e
+                  instancias que hoy han permanecido cerradas.
+                </p>
+              </li>
+            </ol>
+          </article>
+        </div>
+        <!-- End Single Post Content -->
+      </div>
+    </div>
+    <!--  End -->
+
+    <!-- Team Start -->
+    <div class="container-fluid py-5 wow fadeInUp" style="text-align: justify;" data-wow-delay="0.1s">
+      <div class="container py-5">
+        <div
+          class="section-title text-center position-relative pb-3 mb-5 mx-auto"
+          style="max-width: 600px"
+        >
+          <h5 class="fw-bold text-primary text-uppercase">
+            Un poco más de historia
+          </h5>
+          <h1 class="mb-0">
+            Detalles de la gestación y creación del SINASSASS
+          </h1>
+        </div>
+        <div class="row g-5">
+          <div class="row g-5">
+            <!-- <h3 class="pb-4 mb-4 fst-italic border-bottom">
+              From the Firehose
+            </h3> -->
+
+            <article class="blog-post">
+              <!-- <h2 class="blog-post-title mb-1">Sample blog post</h2>
+              <p class="blog-post-meta">
+                January 1, 2021 by <a href="#">Mark</a>
+              </p> -->
+
+              <p>
+                Es indudable que la semilla de la cual nació el SINASSASS, no
+                fue otra que la persecución injusta desatada en contra de los
+                Administradores de los Hospitales y de Áreas de Salud, a partir
+                del año 2006.
+              </p>
+              <hr />
+              <p>
+                Importante destacar que a la entrada de las nuevas autoridades
+                en la administración superior de la Caja, estaban aún frescos
+                los actos de corrupción en la Caja con el llamado Proyecto
+                Finlandia y que sacudieron al país, con uno de los escándalos de
+                mayor rango, especialmente por la participación del Presidente
+                Ejecutivo de turno junto a algunos miembros de Junta la
+                Directiva y el Gerente de Modernización (puesto creado en el
+                periodo 2002-2006, al parecer como parte del mismo montaje de
+                los actos de corrupción que brotarían luego), en estrecho
+                vínculo de contubernio con altos ejecutivos de empresas privadas
+                y hasta con dos ex-presidentes de la república, entre otros.
+              </p>
+              <!-- <h2>Blockquotes</h2> -->
+              <p>
+                Al interno del SINASSASS, se maneja la hipótesis de que ante el
+                desprestigio del que fue objeto la Caja ante la opinión pública,
+                las nuevas autoridades y muy en especial el señor Presidente
+                Ejecutivo, quiso aparentar con una gestión de limpieza de la
+                corruptela en la Institución, pero como “buen político”, sin
+                aparecer en escena y como la acción de la Gerencia Médica es la
+                que mayormente perciben los usuarios, encomendó a la persona que
+                nombró en el cargo, llevar a cabo su labor con la rudeza
+                necesaria para que sus decisiones de presunto saneamiento
+                interno en la administración de sus Unidades, trascendieran a la
+                opinión pública y fueran noticia.
+              </p>
+              <!-- <blockquote class="blockquote">
+                <p>Quoted text goes here.</p>
+              </blockquote> -->
+              <p>
+                Una de esas primeras acciones fue la intervención del Hospital
+                San Juan de Dios, quizá no sólo por su problemática interna,
+                sino por ser uno -o tal vez el más emblemático- de los
+                Hospitales de la Caja.
+              </p>
+              <!-- <h3>Example lists</h3> -->
+              <p>
+                Los resultados de esa intervención, efectivamente fueron
+                noticia: hubo separaciones del cargo de varios empleados de
+                nivel intermedio y hasta los del más alto rango como el
+                Sub-Administrador General, el Director Administrativo-Financiero
+                y el Sub-Director General, los cuales fueron finalmente
+                despedidos; el Director General a quien también se le propuso el
+                despido, aprovechó su derecho a la jubilación y se le permitió
+                retirarse por esa vía.
+              </p>
+              <!-- <ul>
+                <li>First list item</li>
+                <li>Second list item with a longer description</li>
+                <li>Third list item to close it out</li>
+              </ul> -->
+              <p>
+                Pero lo relevante de esos despidos, fue que aún cuando la Caja
+                tenía su propia Normativa de Relaciones Laborales que
+                garantizaba el debido proceso, trascendió ampliamente que a
+                estos funcionarios se les despidió sin responsabilidad patronal
+                y sin haberles aplicado el procedimiento que garantizaba la
+                citada Normativa, la práctica Institucional a lo largo de toda
+                su historia y la misma Constitución Política.
+              </p>
+              <!-- <ol>
+                <li>First list item</li>
+                <li>Second list item with a longer description</li>
+                <li>Third list item to close it out</li>
+              </ol> -->
+              <p>
+                El caso del Hospital San Juan de Dios fue tan sólo uno de los
+                primeros, porque poco tiempo después quisieron aplicar lo mismo
+                al Director General y al Director Administrativo-Financiero del
+                Hospital Dr. Rafael Ángel Calderón Guardia, pero una huelga de
+                los empleados, obligó a echar marcha atrás. También en el
+                Hospital de Alajuela arremetieron contra el Director General y
+                el Director Administrativo-Financiero; este último estuvo
+                separado del cargo por un lapso cercano a un año y el Director
+                se vio obligado a defenderse con fiereza para no ser destituido.
+              </p>
+              <!-- <dl>
+                <dt>HyperText Markup Language (HTML)</dt>
+                <dd>
+                  The language used to describe and define the content of a Web
+                  page
+                </dd>
+                <dt>Cascading Style Sheets (CSS)</dt>
+                <dd>Used to describe the appearance of Web content</dd>
+                <dt>JavaScript (JS)</dt>
+                <dd>
+                  The programming language used to build advanced Web sites and
+                  applications
+                </dd>
+              </dl> -->
+              <!-- <h2>Inline HTML elements</h2> -->
+              <p>
+                En fin, fue una ola de agresiones contra la gestión de muchos
+                compañeros Administradores y Directores, en la que abundaron los
+                procesos de investigación administrativa, hasta por motivos
+                intrascendentes o imputables más a la escasez de recursos
+                disponibles en sus Unidades que a intencionalidad de incumplir.
+              </p>
+              <!-- <ul>
+                <li>
+                  <strong>To bold text</strong>, use
+                  <code class="language-plaintext highlighter-rouge"
+                    >&lt;strong&gt;</code
+                  >.
+                </li>
+                <li>
+                  <em>To italicize text</em>, use
+                  <code class="language-plaintext highlighter-rouge"
+                    >&lt;em&gt;</code
+                  >.
+                </li>
+                <li>
+                  Abbreviations, like
+                  <abbr title="HyperText Markup Language">HTML</abbr> should use
+                  <code class="language-plaintext highlighter-rouge"
+                    >&lt;abbr&gt;</code
+                  >, with an optional
+                  <code class="language-plaintext highlighter-rouge"
+                    >title</code
+                  >
+                  attribute for the full phrase.
+                </li>
+                <li>
+                  Citations, like <cite>— Mark Otto</cite>, should use
+                  <code class="language-plaintext highlighter-rouge"
+                    >&lt;cite&gt;</code
+                  >.
+                </li>
+                <li>
+                  <del>Deleted</del> text should use
+                  <code class="language-plaintext highlighter-rouge"
+                    >&lt;del&gt;</code
+                  >
+                  and <ins>inserted</ins> text should use
+                  <code class="language-plaintext highlighter-rouge"
+                    >&lt;ins&gt;</code
+                  >.
+                </li>
+                <li>
+                  Superscript <sup>text</sup> uses
+                  <code class="language-plaintext highlighter-rouge"
+                    >&lt;sup&gt;</code
+                  >
+                  and subscript <sub>text</sub> uses
+                  <code class="language-plaintext highlighter-rouge"
+                    >&lt;sub&gt;</code
+                  >.
+                </li>
+              </ul> -->
+              <p>
+                Lo cierto del caso es que los reiterados actos de abuzo de
+                poder, de la Gerencia Médica especialmente, secundada por la
+                Auditoría Interna y el Centro para la Investigación de los
+                Procesos Administrativos -CIPA-, marcaron una página gris de
+                abuso de poder, sin parangón en la historia de la Caja.
+              </p>
+              <!-- <h2>Heading</h2> -->
+              <p>
+                Indudablemente, esos hechos fueron el detonante que generó el
+                despertar de los Administradores de Hospital, pues con ellos,
+                quedó claro que las instancias superiores lejos de protegernos
+                como era su deber por el hecho de ser los representantes de la
+                Institución en el nivel local, se habían dedicado a atacarnos
+                injustamente y a tomar a las autoridades locales como chivos
+                expiatorios y a cuya costa, las autoridades superiores de turno,
+                estaban queriendo ganar adeptos ante la opinión pública.
+                <hr />
+                Aun así, no fue nada fácil la labor de convencimiento para la
+                creación del SINASSASS; una vez que los gestores de la idea se
+                convencieron de que se estaba causando un daño irreparable al
+                clima organizacional de la Institución y que además, de manera
+                injusta se estaba lesionando severamente a los compañeros (as)
+                que eran víctima de las frecuentes arremetidas, la conformación
+                de una organización sindical era la idónea para crear un frente
+                de defensa, tanto para proteger a la Institución como a los
+                compañeros (as) en la Administración de los Servicios de Salud.
+
+              </p>
+              <!-- <h3>Sub-heading</h3> -->
+              <p>
+                Fue en ese contexto que, en una conversación de rutina entre dos de los Administradores de Hospital que acostumbraban reunirse para analizar la problemática del grupo en su conjunto y buscar opciones de solución, que emergió la idea de crear una organización sindical, al amparo de la cual se pudieran hablar abiertamente de la problemática que se estaba viviendo y conjuntar un frente de batalla que pusiera freno a los abusos que se estaban cometiendo.
+
+              </p>
+              <!-- <pre><code>Example code block</code></pre> -->
+              <p>
+                Ya en esa línea hacia la conformación del SINASSASS, resulta irrenunciable dejar de mencionar dos reuniones que podrían considerarse pioneras en la construcción del camino que nos llevaría a la creación del Sindicato; una fue el 10 de agosto de 2007 en el Café del Hotel Aurola Holiday In, sitio al que se convocó a varios compañeros (as) que estaban interesados (os) en conformar la Organización. A la cita acudieron Adolfo Cartín Ramírez, Mario Cascante Arguedas, Jorge Mora Acuña, Mayela Carrillo Valverde, Cesar Jiménez Salas, Flander Alfaro Chacón y Gilberth Monge Madrigal. Esta reunión, junto a la otra que se realizó una o dos semanas después en la casa de Don Adolfo Cartín, fueron particularmente importantes porque en ellas el grupo gestor se amalgamó y se comenzaron a sentar las bases de los Estatutos y por consiguiente de la Organización que nacería a la vida jurídica poco tiempo después.
+              </p>
+
+
+              <p>
+                Conocedores de que la conformación de un sindicato de Administradores de Hospital y de Áreas de Salud era un choque fuerte para los colegas, la idea se comenzó a difundir en momentos en que el pánico que había cundido en todas las Unidades a lo largo y ancho del país, daba indicios de que la iniciativa podía tener aceptación. Poco a poco se fue hablando del asunto en cada oportunidad que se presentaba y como respuesta se tuvo la opinión decidida de algunos compañeros que, de inmediato, admitieron que esa era la salida, pero otros con convicción opuesta, manifestaron que “nunca pertenecerían a un sindicato”.
+
+
+              </p>
+
+              <p>Los hechos continuaron su marcha, los intentos del grupo de Administradores por tener acercamiento con la titular en la Gerencia Médica, desde su llegada al cargo, fueron infructuosos consecutivamente, al tiempo que los actos de persecución y los procesos de investigación administrativa continuaban incesantes.</p>
+
+
+              <p>Todos estos hechos fueron consolidando la idea de que la organización sindical era una necesidad y cada vez fueron menos los opositores a la idea; fue así como los más convencidos se dedicaron a trabajar más fuerte aún en el ordenamiento de las ideas y en todo lo necesario para crear la Organización. Una vez que los contenidos fueron discutidos al interno del grupo promotor y se llegó a acuerdos respecto de lo que podrían ser la bases de la organización sindical a crear, se convocó a los posibles militantes a una reunión para constituir el Sindicato y nombrar la primer Junta Directiva. Se consiguió un lugar sin costo en el edificio de la Asociación Solidarista de la Caja que se ubica al final de la avenida segunda al pie de Cuesta de Moras y se coordinó con un Abogado amigo para que realizara los trámites legales correspondientes, condicionado al pago posterior. Lamentablemente, la concurrencia a esa convocatoria no fue suficiente y por tanto, fue un intento fallido.</p>
+  
+            
+            
+            
+            <p>Poco tiempo después se quiso aprovechar la concurrencia de los Directores Administrativo-Financiero de Hospitales en una de las reuniones del Consejo Nacional de Directores Administrativo-Financiero de Hospital y Representantes de las Áreas de Salud, el cual se llevó a cabo en el Hospital de Alajuela el 29/06/07. Para ese fin se invitó nuevamente al Abogado, pero cuando se planteó al grupo la intención de aprovechar la concurrencia para la conformación del sindicato, uno de los colegas presentó férrea oposición y total desacuerdo en que se aprovechara la reunión del Consejo para ese propósito. Ante esa circunstancia y dado que la conformación del sindicato no estaba en la agenda del Consejo, pese a que la mayoría estaba de acuerdo, el Abogado recomendó su postergación para otro momento en el que sí prevaleciera el consenso. Efectivamente, la sugerencia del Asesor Legal fue acogida y el intento no pasó de ser solamente eso: un intento más.
+
+            </p>
+            <p>
+              Posteriormente se dio un hecho curioso, la reunión última del Consejo de Directores Administrativo-Financiero de Hospitales del 2007, se programó para el 30 de noviembre y se acordó que fuera en una propiedad privada de uno de los colegas, en Jesús María de San Mateo para realizar un pequeño convivio de fin de año al final de la reunión y resultó que el colega que se había opuesto a la conformación del Sindicato en la reunión del 29 de junio en Alajuela, llamó para justificar su ausencia a esa reunión debido a que no podría asistir.
+            </p>
+            <p>
+              Ese hecho encendió nuevamente el interés por la creación del sindicato, el cual estaba ahí latente en espera de una ocasión propicia y que parecía ser ésta. Sin tiempo que perder, los promotores de la idea, nuevamente prepararon lo pertinente para la creación del sindicato, lo cual involucraba por supuesto, llevar al Abogado hasta el lugar de la reunión.
+            </p>
+            
+
+            <p>La concurrencia al Consejo en esa ocasión no fue tan nutrida como en otras, pero sí había suficientes miembros interesados como para que se pudiera crear el sindicato que, para ese entonces, ya era una idea consolidada entre la gran mayoría de los Administradores de los Hospitales y de las Áreas de Salud.
+
+            </p>
+
+            <p>Una vez que los temas de agenda fueron abordados, se dio por concluida la reunión del Consejo, pero en acto seguido, se planteó a la concurrencia la idea de crear en ese momento la organización sindical que habíamos venido intentando y que por diferentes razones, no había sido posible hasta ese momento. Se les informó que la organización llevaría el nombre de Sindicato Nacional de Administradores de Servicios de Salud del Seguro Social, identificable con las siglas SINASSASS.
+
+            </p>
+
+            <p>Para mayor convencimiento, se explicó el horizonte que tendría la organización, quienes podrían ser sus militantes, cuales los objetivos perseguidos, se dio lectura a los considerandos que se dejarían en el acta constitutiva como evidencia del contexto que llevaría a sus miembros hacia la conformación del sindicato, pero dejando claro ante todo, que el interés mayor sería la defensa de la Caja como Institución de bien social, que merece ser protegida por los miembros del Sindicato y por todo el pueblo costarricense.
+
+            </p>
+
+            <p>Pese al convencimiento aparente, al someter a votación la conformación del sindicato, abundaron las expresiones de incertidumbre en los presentes, pero en ese momento se contó con la presencia de uno de los colegas que, junto al opositor ausente, se había manifestado también en contra de la creación del sindicato, pero que afortunadamente, los hechos de persecución y abusos de poder que se estaban dando, lo habían hecho reflexionar hasta el punto de cambiar su posición y manifestarse abiertamente anuente a la conformación del sindicato y a su militancia como asociado.
+
+            </p>
+
+            <hr>
+            <p>Todo ese contexto favoreció el que la votación a la que sometió la moción, fuera aprobada sin opositores que se manifestaran abiertamente en contra; no obstante, las mayores dificultades se enfrentarían al pretender conformar la Junta Directiva, ya que algunos expresaron anuencia a formar parte de la Junta Directiva, pero en puestos de vocalía y otros, pero nadie aceptaba la Secretaría General.</p>
+          
+            
+            <p>Las propuestas iban y venían, se modificaban y se lanzaban de nuevo, pero con el mismo resultado negativo. Fue entonces cuando uno de los compañeros presentes tuvo la idea de llamar a un colega ausente ese día, pero que se había manifestado muy entusiasmado con la idea del sindicato; la idea fue proponerle que aceptara ser nominado como Secretario General. La llamada se concretó sin tardanza y sin mayores dubitaciones el colega aceptó la nominación. Tal decisión fue comunicada a los (as) presentes, quienes en acto seguido votaron unánimemente por su nombramiento y consecuentemente, se convirtió en el Secretario General nombrado ese día.
+
+            </p>
+
+
+            <p>Ya teniendo el Secretario General nombrado, se procedió con la Sub-Secretaría General Adjunta, la cual se nombró sin problemas, al igual que la Secretaría de Conflictos, la Secretaría de Finanzas y la Secretaría de Organización y Comunicación; para el nombramiento de la Secretaría de Actas y Correspondencia, Vocal 1 y Vocal 2, no había aceptación por parte de ninguno de los presentes y por tanto, se recurrió a la misma estrategia de llamar a algunos (as) colegas de los (as) cuales se tenía conocimiento que estaban interesados en la conformación del Sindicato. Las llamadas produjeron efecto positivo y rápidamente se nombró a los vocales. El último nombramiento se dio con el órgano de Fiscalía, el cual recayó en una de las compañeras presentes que, pese a estar próxima a jubilarse, estuvo siempre muy identificada con la creación del sindicato y por tanto aceptó el puesto sin objeciones. De esa manera fue creado el SINASSASS, pero la historia no termina ahí, aún queda por narrar algunos hechos importantes que merecen los párrafos siguientes.
+
+            </p>
+
+            <p>En los términos descritos, el Sindicato quedó conformado y posteriormente se iniciarían los trámites de inscripción ante el Ministerio de Trabajo; esto implicaba que los miembros de la Junta Directiva debían reunirse para ultimar detalles e ir perfilando su plan de trabajo, partiendo de un cronograma de reuniones y un lugar donde reunirse.
+
+            </p>
+
+            <p>Algunas semanas pasaron sin que el Secretario General electo tomara la iniciativa que le correspondía, razón por la cual fue necesario interpelarlo al respecto. El resultado fue que el colega que había aceptado la Secretaría General, estaba interino en el puesto de Director Administrativo-Financiero de Hospital y en los días siguientes a su nombramiento, reflexionó respecto de cuánto podría perjudicarle el asumir el puesto más alto en el Sindicato y por esa razón, comunicó su decisión de no asumir el cargo.
+
+            </p>
+          
+            <p>Ese hecho, indudablemente obligó a realizar los ajustes correspondientes previos a la inscripción del acta constitutiva y en ese entorno de incertidumbre, el Secretario General Adjunto que en primera instancia no había querido aceptar el puesto de Secretario General, dio el paso y aceptó el cargo. Como parte de esos ajustes, el Coordinador del Consejo de Administradores que en virtud de ese cargo había considerado inconveniente formar parte de la Junta Directiva del Sindicato, terminó dejando en manos de un sucesor su puesto en el Consejo y aceptando un cargo en la Junta Directiva del SINASSASS. Superados esos escoyos y consultados, personalmente a los que fue posible y por teléfono a los de lugares alejados, a todos los que habían firmado el acta original, de asistencia y de acuerdos, se formalizaron los trámites de inscripción ante el Ministerio de Trabajo y Seguridad Social y así nació oficialmente a la vida jurídica el Sindicato Nacional de Administradores de Servicios de Salud del Seguro Social; es por esa razón que el Acta Constitutiva señala como fecha de su creación el 15 de diciembre y no el 30 de noviembre de 2007, que fue la real.
+
+            </p>
+
+
+            <p>Un aspecto importante a destacar es que la primer Junta Directiva inició sus gestiones sin recursos de ningún tipo y todo su accionar inicial fue sobre el esfuerzo propio de sus integrantes, quienes fueron incluso sujetos de crédito, personalmente, para respaldar sus gestiones iniciales y hasta el posterior alquiler de la primera oficina.
+
+            </p>
+
+            <p>Como cierre de esta sinopsis, se torna imposible no hacer mención a dos hechos más que resultan, cada uno en su ámbito, de gran importancia. Uno es el gesto de desprendimiento de los miembros del Consejo de Administradores de Hospitales, quienes por acuerdo unánime, decidieron aliviar las penurias económicas del SINASSASS, con una donación de dos millones de colones tomados de su Fondo de Asistencia Mutua Para la Defensa Legal, el cual habían constituido varios años atrás. El otro hecho no requiere mayor descripción: se trata simplemente de que el opositor acérrimo a la conformación del Sindicato en la reunión del 29 de junio de 2007 en el Hospital de Alajuela y cuya ausencia al Consejo del 30 de noviembre de 2007 se aprovechó para conformar la Organización, por su propia convicción decidió posteriormente afiliarse y formar del Sindicato, al que tanto se opuso.</p>
+        
+        
+        <p>Para concluir, sólo resta indicar que al momento de escribir esta sinopsis, poco más de dos años después de su creación, el SINASSASS cuenta ya con más de 150 afiliados, ha podido prestar ayuda legal a muchos (as) compañeros (as) que lo han requerido y ha dado apoyo directo con su participación en causas que lo han ameritado; incluso ya registra a su haber logros importantes en el campo reivindicativo y su proyección, se vislumbra hacia un futuro muy promisorio, en armonía con sus propósitos y objetivos originales.
+
+        </p>
+
+        <div class="post-meta">
+          <span>Nota: escrita en el año 2011 por </span>
+          <span class="date">Gilberth Monge Madrigal</span>
+        </div>
+        
+          </article>
+
+            <!-- <article class="blog-post">
+              <h2 class="blog-post-title mb-1">Another blog post</h2>
+              <p class="blog-post-meta">
+                December 23, 2020 by <a href="#">Jacob</a>
+              </p>
+
+              <p>
+                This is some additional paragraph placeholder content. It has
+                been written to fill the available space and show how a longer
+                snippet of text affects the surrounding content. We'll repeat it
+                often to keep the demonstration flowing, so be on the lookout
+                for this exact same string of text.
+              </p>
+              <blockquote>
+                <p>
+                  Longer quote goes here, maybe with some
+                  <strong>emphasized text</strong> in the middle of it.
+                </p>
+              </blockquote>
+              <p>
+                This is some additional paragraph placeholder content. It has
+                been written to fill the available space and show how a longer
+                snippet of text affects the surrounding content. We'll repeat it
+                often to keep the demonstration flowing, so be on the lookout
+                for this exact same string of text.
+              </p>
+              <h3>Example table</h3>
+              <p>And don't forget about tables in these posts:</p>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Upvotes</th>
+                    <th>Downvotes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Alice</td>
+                    <td>10</td>
+                    <td>11</td>
+                  </tr>
+                  <tr>
+                    <td>Bob</td>
+                    <td>4</td>
+                    <td>3</td>
+                  </tr>
+                  <tr>
+                    <td>Charlie</td>
+                    <td>7</td>
+                    <td>9</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td>Totals</td>
+                    <td>21</td>
+                    <td>23</td>
+                  </tr>
+                </tfoot>
+              </table>
+
+              <p>
+                This is some additional paragraph placeholder content. It's a
+                slightly shorter version of the other highly repetitive body
+                text used throughout.
+              </p>
+            </article>
+
+            <article class="blog-post">
+              <h2 class="blog-post-title mb-1">New feature</h2>
+              <p class="blog-post-meta">
+                December 14, 2020 by <a href="#">Chris</a>
+              </p>
+
+              <p>
+                This is some additional paragraph placeholder content. It has
+                been written to fill the available space and show how a longer
+                snippet of text affects the surrounding content. We'll repeat it
+                often to keep the demonstration flowing, so be on the lookout
+                for this exact same string of text.
+              </p>
+              <ul>
+                <li>First list item</li>
+                <li>Second list item with a longer description</li>
+                <li>Third list item to close it out</li>
+              </ul>
+              <p>
+                This is some additional paragraph placeholder content. It's a
+                slightly shorter version of the other highly repetitive body
+                text used throughout.
+              </p>
+            </article>
+
+            <nav class="blog-pagination" aria-label="Pagination">
+              <a class="btn btn-outline-primary rounded-pill" href="#">Older</a>
+              <a class="btn btn-outline-secondary rounded-pill disabled"
+                >Newer</a
+              >
+            </nav> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Team End -->
+
+    <!-- Vendor Start -->
+  
+    <!-- Vendor End -->
+
+   <!-- Footer Start -->
+   <div
+   class="container-fluid bg-white text-light mt-5 wow fadeInUp"
+   style="box-shadow: rgba(99, 99, 99, 0.2) 0px 0px 8px 0px"
+   data-wow-delay="0.1s"
+ >
+   <div class="container">
+     <div class="row gx-5">
+       <div class="col-lg-4 col-md-6 footer-about">
+         <div
+           class="d-flex flex-column align-items-center justify-content-center text-center h-100 p-4 bg-dark"
+         >
+           <a href="index.html" class="navbar-brand">
+             <h1 class="m-0 text-white">SINASSASS</h1>
+           </a>
+           <p class="mt-3 mb-4">
+             Lorem diam sit erat dolor elitr et, diam lorem justo amet clita
+             stet eos sit. Elitr dolor duo lorem, elitr clita ipsum sea. Diam
+             amet erat lorem stet eos. Diam amet et kasd eos duo.
+           </p>
+           <form action="">
+             <div class="input-group">
+               <input
+                 type="text"
+                 class="form-control border-white p-3"
+                 placeholder="Tu correo"
+               />
+               <button class="btn btn-dark">Enviar</button>
+             </div>
+           </form>
+         </div>
+       </div>
+       <div class="col-lg-8 col-md-6">
+         <div class="row gx-5">
+           <div class="col-lg-4 col-md-12 pt-5 mb-5" style="color: black">
+             <div
+               class="section-title section-title-sm position-relative pb-3 mb-4"
+             >
+               <h3 class="text-black mb-0">Encuéntranos</h3>
+             </div>
+             <div class="d-flex mb-2 text-black">
+               <i class="bi bi-geo-alt text-black me-2"></i>
+               <p class="mb-0">
+                 San José, De la Torre Omega Clínica Bíblica, 50 Sur, 200
+                 Oeste y 75 Sur.
+               </p>
+             </div>
+             <div class="d-flex mb-2">
+               <i class="bi bi-envelope-open text-black me-2"></i>
+               <p class="mb-0 text-black">info@sinassasscr.org</p>
+             </div>
+             <div class="d-flex mb-2">
+               <i class="bi bi-telephone text-black me-2"></i>
+               <p class="mb-0 text-black">+506 2221-3584</p>
+             </div>
+             <div class="d-flex mt-4">
+               <!-- <a class="btn btn-primary btn-square me-2" href="#"
+                 ><i class="fab fa-twitter fw-normal"></i
+               ></a> -->
+               <a
+                 class="btn btn-primary btn-square me-2"
+                 href="https://www.facebook.com/SINASSASSCCSS/"
+                 ><i class="fab fa-facebook-f fw-normal"></i
+               ></a>
+               <!-- <a class="btn btn-primary btn-square me-2" href="#"
+                 ><i class="fab fa-linkedin-in fw-normal"></i
+               ></a>
+               <a class="btn btn-primary btn-square" href="#"
+                 ><i class="fab fa-instagram fw-normal"></i
+               ></a> -->
+             </div>
+           </div>
+           <div
+             class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5"
+             style="color: black"
+           >
+             <div
+               class="section-title section-title-sm position-relative pb-3 mb-4"
+             >
+               <h3 class="text-black mb-0">Horario</h3>
+             </div>
+             <div
+               class="link-animated d-flex flex-column justify-content-start"
+             >
+               <a class="mb-2" style="color: black" href=""
+                 ><i class="bi bi-clock text-primary me-2"></i>Lunes: 7:00 am
+                 – 16:00 pm</a
+               >
+               <a class="mb-2" style="color: black" href=""
+                 ><i class="bi bi-clock text-primary me-2"></i>Martes: 7:00
+                 am – 16:00 pm</a
+               >
+               <a class="mb-2" style="color: black" href=""
+                 ><i class="bi bi-clock text-primary me-2"></i>Miércoles:
+                 7:00 am – 16:00 pm</a
+               >
+               <a class="mb-2" style="color: black" href=""
+                 ><i class="bi bi-clock text-primary me-2"></i>Jueves: 7:00
+                 am – 16:00 pm</a
+               >
+               <a class="mb-2" style="color: black" href=""
+                 ><i class="bi bi-clock text-primary me-2"></i>Viernes: 7:00
+                 am – 15:00 pm</a
+               >
+               <a class="mb-2" style="color: black" href=""
+                 ><i class="bi bi-clock text-primary me-2"></i>Sábado y
+                 Domingo: Cerrado</a
+               >
+             </div>
+           </div>
+           <div
+             class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5"
+             style="color: black"
+           >
+             <div
+               class="section-title section-title-sm position-relative pb-3 mb-4"
+             >
+               <h3 class="text-black mb-0">Links populares</h3>
+             </div>
+             <div
+               class="link-animated d-flex flex-column justify-content-start"
+             >
+               <a class="text-black mb-2" style="color: black" href="#"
+                 ><i class="bi bi-arrow-right text-primary me-2"></i
+                 >Inicio</a
+               >
+               <a class="text-black mb-2" style="color: black" href="#"
+                 ><i class="bi bi-arrow-right text-primary me-2"></i>Sobre
+                 Nosotros</a
+               >
+               <a class="text-black mb-2" style="color: black" href="#"
+                 ><i class="bi bi-arrow-right text-primary me-2"></i>Nuestros
+                 Servicios</a
+               >
+
+               <a class="text-black mb-2" style="color: black" href="#"
+                 ><i class="bi bi-arrow-right text-primary me-2"></i>Latest
+                 Noticias</a
+               >
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+ <div class="container-fluid text-white" style="background: #d60000">
+   <div class="container text-center">
+     <div class="row justify-content-end">
+       <div class="col-lg-8 col-md-6">
+         <div
+           class="d-flex align-items-center justify-content-center"
+           style="height: 75px"
+         >
+           <p class="mb-0">
+             &copy;
+             <a class="text-white border-bottom" href="#">SINASSASS</a>. Todos
+             los derechos reservados
+           </p>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+ <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"
+      ><i class="bi bi-arrow-up"></i
+    ></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
