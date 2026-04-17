@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -227,29 +227,7 @@
         <div class="row g-5">
           <div class="col-lg-8">
             <!-- Noticia Start -->
-            <div class="mb-5">
-              <img
-                class="img-fluid w-100 rounded mb-5"
-                src="../img/news/news-15.jpeg"
-                alt=""
-              />
-              <h1 class="mb-4">
-                LABORES DE TRABAJADORES DE LA CCSS DEBEN SER DECLARADAS COMO
-                EXCLUSIVOS Y EXCLUYENTES.
-              </h1>
-              <div style="text-align: justify">
-                <p>
-                  La Junta Directiva del Sindicato de Administradores de
-                  Servicios de Salud y Afines del Seguro Social SINASSASS,
-                  comunica que acordó en su sesión ordinaria celebrada el
-                  viernes 14 de abril de los presentes, la contratación de
-                  consultoría especial para fijar formal posición y solicitud
-                  ante Junta Directiva de la CCSS, respecto a que esta última
-                  declare como exclusivos y excluyentes todas las relaciones de
-                  empleo y los puestos de las personas trabajadoras de la CCSS.
-                </p>
-              </div>
-            </div>
+            <div class="mb-5" id="detalle-noticia"></div>
 
             <!-- Noticia End -->
           </div>
@@ -298,33 +276,7 @@
                 <h3 class="mb-0">Publicaciones Recientes</h3>
               </div>
 
-              <div class="d-flex rounded overflow-hidden mb-3">
-                <img
-                  class="img-fluid"
-                  src="../img/news/news-1.jpg"
-                  style="width: 100px; height: 100px; object-fit: cover"
-                  alt=""
-                />
-                <a
-                  href="news-1.html"
-                  class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0"
-                  >Directivos suspendidos arbitrariamente deben ser reinstalados
-                  en sus cargos.
-                </a>
-              </div>
-              <div class="d-flex rounded overflow-hidden mb-3">
-                <img
-                  class="img-fluid"
-                  src="../img/news/news-2.jpeg"
-                  style="width: 100px; height: 100px; object-fit: cover"
-                  alt=""
-                />
-                <a
-                  href="news-2.html"
-                  class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0"
-                  >SINASSASS reformas al estatuto asamblea general ordinaria
-                </a>
-              </div>
+              <div id="contenedor-publicaciones-recientes"></div>
             </div>
             <!-- Publicaciones Recientes End -->
           </div>
@@ -526,5 +478,7 @@
 
     <!-- Template Javascript -->
     <script src="../js/main.js"></script>
+    <script src="../js/blog-data.js"></script>
+    <script src="../js/noticia.js"></script>
   </body>
 </html>
