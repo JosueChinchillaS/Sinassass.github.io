@@ -11,6 +11,137 @@ function buscarNoticiaPorId(id) {
   return noticias.find((noticia) => noticia.id === id);
 }
 
+function obtenerMediaNoticia(noticia = {}) {
+  const url = noticia.imagen || "";
+  const esPdf = /\.pdf(?:[?#].*)?$/i.test(url);
+
+  return { url, esPdf };
+}
+
+function obtenerDocumentoNoticia(noticia = {}) {
+  const url = noticia.pdf || noticia.archivoPdf || noticia.documento || "";
+  const esPdf = /\.pdf(?:[?#].*)?$/i.test(url);
+  const esWord = /\.docx?(?:[?#].*)?$/i.test(url);
+
+  return { url, esPdf, esWord };
+}
+
+function resolverRutaMedia(url = "", prefijo = "") {
+  if (/^(?:https?:)?\/\//i.test(url) || url.startsWith("/")) return url;
+
+  return `${prefijo}${url}`;
+}
+
+function renderMediaDetalle(noticia = {}) {
+  const media = obtenerMediaNoticia(noticia);
+  const url = resolverRutaMedia(media.url, "../");
+
+  if (!media.url) return "";
+
+  if (media.esPdf) {
+    return `
+      <div class="rounded mb-5 overflow-hidden border">
+        <object
+          data="${url}"
+          type="application/pdf"
+          class="w-100"
+          style="height: 760px"
+          aria-label="${noticia.titulo}"
+        >
+          <div class="bg-light text-center p-5">
+            <p>Tu navegador no puede mostrar este PDF aquí.</p>
+            <a class="btn btn-primary" href="${url}" target="_blank" rel="noopener">
+              Abrir PDF
+            </a>
+          </div>
+        </object>
+      </div>
+    `;
+  }
+
+  return `
+    <img
+      class="img-fluid w-100 rounded mb-5"
+      src="${url}"
+      alt="${noticia.titulo}"
+      loading="lazy"
+    />
+  `;
+}
+
+function renderDocumentoAdjunto(noticia = {}) {
+  const documento = obtenerDocumentoNoticia(noticia);
+  const url = resolverRutaMedia(documento.url, "../");
+
+  if (!documento.url) return "";
+
+  if (documento.esPdf) {
+    return `
+      <div class="mb-5">
+        <h4 class="mb-3">Documento adjunto</h4>
+        <div class="rounded overflow-hidden border">
+          <object
+            data="${url}"
+            type="application/pdf"
+            class="w-100"
+            style="height: 760px"
+            aria-label="Documento adjunto: ${noticia.titulo}"
+          >
+            <div class="bg-light text-center p-5">
+              <p>Tu navegador no puede mostrar este PDF aquí.</p>
+              <a class="btn btn-primary" href="${url}" target="_blank" rel="noopener">
+                Abrir PDF
+              </a>
+            </div>
+          </object>
+        </div>
+      </div>
+    `;
+  }
+
+  const icono = documento.esWord ? "far fa-file-word" : "far fa-file";
+  const texto = documento.esWord ? "Abrir documento Word" : "Abrir documento";
+
+  return `
+    <div class="bg-light rounded p-4 mb-5">
+      <h4 class="mb-3">Documento adjunto</h4>
+      <a class="btn btn-primary" href="${url}" target="_blank" rel="noopener">
+        <i class="${icono} me-2"></i>${texto}
+      </a>
+    </div>
+  `;
+}
+
+function renderMiniaturaNoticia(noticia = {}) {
+  const media = obtenerMediaNoticia(noticia);
+  const url = resolverRutaMedia(media.url, "../");
+
+  if (!media.url) return "";
+
+  if (media.esPdf) {
+    return `
+      <a
+        href="../${noticia.enlace}"
+        class="d-flex align-items-center justify-content-center bg-primary text-white"
+        style="width: 100px; height: 100px; flex: 0 0 100px"
+        aria-label="Abrir PDF: ${noticia.titulo}"
+      >
+        <i class="far fa-file-pdf" style="font-size: 2rem"></i>
+      </a>
+    `;
+  }
+
+  return `
+    <img
+      class="img-fluid"
+      src="${url}"
+      style="width: 100px; height: 100px; object-fit: cover"
+      alt="${noticia.titulo}"
+      loading="lazy"
+    />
+  `;
+}
+
 function renderNoticiaActual(contenedorId) {
   const contenedor = document.getElementById(contenedorId);
   if (!contenedor) return;
@@ -43,12 +174,8 @@ function renderNoticiaActual(contenedorId) {
         <p>${formatearTextoNoticia(noticia.contenido || noticia.resumen || "")}</p>
       </div>
 
-      <img
-        class="img-fluid w-100 rounded mb-5"
-        src="../${noticia.imagen}"
-        alt="${noticia.titulo}"
-        loading="lazy"
-      />
+      ${renderMediaDetalle(noticia)}
+      ${renderDocumentoAdjunto(noticia)}
     </div>
   `;
 
@@ -71,13 +198,7 @@ function renderPublicacionesRecientesDetalle(
     .map(
       (noticia) => `
         <div class="d-flex rounded overflow-hidden mb-3">
-          <img
-            class="img-fluid"
-            src="../${noticia.imagen}"
-            style="width: 100px; height: 100px; object-fit: cover"
-            alt="${noticia.titulo}"
-            loading="lazy"
-          />
+          ${renderMiniaturaNoticia(noticia)}
           <a
             href="../${noticia.enlace}"
             class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0"

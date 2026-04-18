@@ -2,6 +2,105 @@ function formatearResumen(texto = "") {
   return texto.replace(/\n/g, "<br>");
 }
 
+function obtenerMediaNoticia(noticia = {}) {
+  const url = noticia.imagen || noticia.pdf || noticia.archivoPdf || noticia.documento || "";
+  const esPdf = /\.pdf(?:[?#].*)?$/i.test(url);
+  const esWord = /\.docx?(?:[?#].*)?$/i.test(url);
+
+  return { url, esPdf, esWord };
+}
+
+function renderMediaNoticia(noticia = {}) {
+  const media = obtenerMediaNoticia(noticia);
+
+  if (!media.url) return "";
+
+  if (media.esPdf) {
+    return `
+      <object
+        data="${media.url}#toolbar=0&navpanes=0&scrollbar=0"
+        type="application/pdf"
+        class="w-100"
+        style="height: 260px"
+        aria-label="${noticia.titulo}"
+      >
+        <div class="d-flex align-items-center justify-content-center bg-white text-center p-4" style="height: 260px">
+          <a class="btn btn-primary" href="${media.url}" target="_blank" rel="noopener">
+            Ver PDF
+          </a>
+        </div>
+      </object>
+    `;
+  }
+
+  if (media.esWord) {
+    return `
+      <a
+        href="${media.url}"
+        target="_blank"
+        rel="noopener"
+        class="d-flex flex-column align-items-center justify-content-center bg-white text-primary text-center p-4"
+        style="height: 260px"
+        aria-label="Abrir documento: ${noticia.titulo}"
+      >
+        <i class="far fa-file-word mb-3" style="font-size: 3rem"></i>
+        <span class="fw-bold">Abrir documento</span>
+      </a>
+    `;
+  }
+
+  return `
+    <img
+      class="img-fluid"
+      src="${media.url}"
+      alt="${noticia.titulo}"
+      loading="lazy"
+    />
+  `;
+}
+
+function renderMiniaturaNoticia(noticia = {}) {
+  const media = obtenerMediaNoticia(noticia);
+
+  if (!media.url) return "";
+
+  if (media.esPdf) {
+    return `
+      <a
+        href="${noticia.enlace}"
+        class="d-flex align-items-center justify-content-center bg-primary text-white"
+        style="width: 100px; height: 100px; flex: 0 0 100px"
+        aria-label="Abrir PDF: ${noticia.titulo}"
+      >
+        <i class="far fa-file-pdf" style="font-size: 2rem"></i>
+      </a>
+    `;
+  }
+
+  if (media.esWord) {
+    return `
+      <a
+        href="${noticia.enlace}"
+        class="d-flex align-items-center justify-content-center bg-primary text-white"
+        style="width: 100px; height: 100px; flex: 0 0 100px"
+        aria-label="Abrir documento: ${noticia.titulo}"
+      >
+        <i class="far fa-file-word" style="font-size: 2rem"></i>
+      </a>
+    `;
+  }
+
+  return `
+    <img
+      class="img-fluid"
+      src="${media.url}"
+      style="width: 100px; height: 100px; object-fit: cover"
+      alt="${noticia.titulo}"
+      loading="lazy"
+    />
+  `;
+}
+
 function renderNoticias(contenedorId, items = []) {
   const contenedor = document.getElementById(contenedorId);
   if (!contenedor) return;
@@ -12,12 +111,7 @@ function renderNoticias(contenedorId, items = []) {
         <div class="col-md-6 wow slideInUp" data-wow-delay="0.1s">
           <div class="blog-item bg-light rounded overflow-hidden">
             <div class="blog-img position-relative overflow-hidden">
-              <img
-                class="img-fluid"
-                src="${noticia.imagen}"
-                alt="${noticia.titulo}"
-                loading="lazy"
-              />
+              ${renderMediaNoticia(noticia)}
               <a
                 class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4"
                 href="#"
@@ -53,13 +147,7 @@ function renderPublicacionesRecientes(contenedorId, items = [], limite = 3) {
     .map(
       (noticia) => `
         <div class="d-flex rounded overflow-hidden mb-3">
-          <img
-            class="img-fluid"
-            src="${noticia.imagen}"
-            style="width: 100px; height: 100px; object-fit: cover"
-            alt="${noticia.titulo}"
-            loading="lazy"
-          />
+          ${renderMiniaturaNoticia(noticia)}
           <a
             href="${noticia.enlace}"
             class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0"

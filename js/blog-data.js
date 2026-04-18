@@ -1,4 +1,31 @@
+// Para publicar una noticia con documento adjunto:
+// imagen: "ruta/imagen.jpg", documento: "ruta/archivo.pdf" o "ruta/archivo.docx".
+// Si no hay imagen, tambien puede usarse imagen: "ruta/documento.pdf".
 const noticias = [
+  {
+    id: "news-68",
+    imagen: "img/news/WhatsApp Image 2026-04-17 at 14.41.26.jpeg",
+    documento: "img/news/CR 0222026 Agencia de Viajes Anticipate Abr 2026.docx",
+    titulo: "OFERTAS hoteles DECAMERON",
+    tituloSidebar: "OFERTAS hoteles DECAMERON",
+    fecha: "17 Abril, 2026",
+    resumen:
+      "¡Abril se vive mejor con Decameron Days y beneficios exclusivos para afiliados SINASSASS!",
+    contenido: `
+OFERTAS hoteles DECAMERON 🏖️ ☀️
+¡Abril se vive mejor con Decameron Days y beneficios exclusivos para afiliados SINASSASS!
+
+Llama ya: Raquel Chacón Conejo
+Gerente de Ventas
+Correo: raquel.chacon@decameron.com
+Celular: 8432 5178
+Línea Gratuita – Call Center Costa Rica : 0800- 5030012
+WhatSapp – Clientes directos: 6490 0013
+WhatSapp - Agencias de viajes: 6472 3677
+    `,
+    enlace: "news/noticia.html?id=news-68",
+  },
+
   {
     id: "news-65",
     imagen: "img/news/news-65.jpeg",
