@@ -18,12 +18,16 @@ function obtenerMediaNoticia(noticia = {}) {
   return { url, esPdf };
 }
 
-function obtenerDocumentoNoticia(noticia = {}) {
-  const url = noticia.pdf || noticia.archivoPdf || noticia.documento || "";
-  const esPdf = /\.pdf(?:[?#].*)?$/i.test(url);
-  const esWord = /\.docx?(?:[?#].*)?$/i.test(url);
+function obtenerDocumentosNoticia(noticia = {}) {
+  const documentos = Array.isArray(noticia.documentos)
+    ? noticia.documentos
+    : [noticia.pdf, noticia.archivoPdf, noticia.documento];
 
-  return { url, esPdf, esWord };
+  return [...new Set(documentos.filter(Boolean))].map((url) => ({
+    url,
+    esPdf: /\.pdf(?:[?#].*)?$/i.test(url),
+    esWord: /\.docx?(?:[?#].*)?$/i.test(url),
+  }));
 }
 
 function resolverRutaMedia(url = "", prefijo = "") {
@@ -69,47 +73,58 @@ function renderMediaDetalle(noticia = {}) {
   `;
 }
 
-function renderDocumentoAdjunto(noticia = {}) {
-  const documento = obtenerDocumentoNoticia(noticia);
-  const url = resolverRutaMedia(documento.url, "../");
+function renderDocumentosAdjuntos(noticia = {}) {
+  const documentos = obtenerDocumentosNoticia(noticia);
 
-  if (!documento.url) return "";
+  if (!documentos.length) return "";
 
-  if (documento.esPdf) {
-    return `
-      <div class="mb-5">
-        <h4 class="mb-3">Documento adjunto</h4>
-        <div class="rounded overflow-hidden border">
-          <object
-            data="${url}"
-            type="application/pdf"
-            class="w-100"
-            style="height: 760px"
-            aria-label="Documento adjunto: ${noticia.titulo}"
-          >
-            <div class="bg-light text-center p-5">
-              <p>Tu navegador no puede mostrar este PDF aquí.</p>
-              <a class="btn btn-primary" href="${url}" target="_blank" rel="noopener">
-                Abrir PDF
-              </a>
+  return documentos
+    .map((documento, index) => {
+      const url = resolverRutaMedia(documento.url, "../");
+      const titulo =
+        documentos.length > 1
+          ? `Documento adjunto ${index + 1}`
+          : "Documento adjunto";
+
+      if (documento.esPdf) {
+        return `
+          <div class="mb-5">
+            <h4 class="mb-3">${titulo}</h4>
+            <div class="rounded overflow-hidden border">
+              <object
+                data="${url}"
+                type="application/pdf"
+                class="w-100"
+                style="height: 760px"
+                aria-label="${titulo}: ${noticia.titulo}"
+              >
+                <div class="bg-light text-center p-5">
+                  <p>Tu navegador no puede mostrar este PDF aquí.</p>
+                  <a class="btn btn-primary" href="${url}" target="_blank" rel="noopener">
+                    Abrir PDF
+                  </a>
+                </div>
+              </object>
             </div>
-          </object>
+          </div>
+        `;
+      }
+
+      const icono = documento.esWord ? "far fa-file-word" : "far fa-file";
+      const texto = documento.esWord
+        ? "Abrir documento Word"
+        : "Abrir documento";
+
+      return `
+        <div class="bg-light rounded p-4 mb-5">
+          <h4 class="mb-3">${titulo}</h4>
+          <a class="btn btn-primary" href="${url}" target="_blank" rel="noopener">
+            <i class="${icono} me-2"></i>${texto}
+          </a>
         </div>
-      </div>
-    `;
-  }
-
-  const icono = documento.esWord ? "far fa-file-word" : "far fa-file";
-  const texto = documento.esWord ? "Abrir documento Word" : "Abrir documento";
-
-  return `
-    <div class="bg-light rounded p-4 mb-5">
-      <h4 class="mb-3">Documento adjunto</h4>
-      <a class="btn btn-primary" href="${url}" target="_blank" rel="noopener">
-        <i class="${icono} me-2"></i>${texto}
-      </a>
-    </div>
-  `;
+      `;
+    })
+    .join("");
 }
 
 function renderMiniaturaNoticia(noticia = {}) {
@@ -175,7 +190,7 @@ function renderNoticiaActual(contenedorId) {
       </div>
 
       ${renderMediaDetalle(noticia)}
-      ${renderDocumentoAdjunto(noticia)}
+      ${renderDocumentosAdjuntos(noticia)}
     </div>
   `;
 

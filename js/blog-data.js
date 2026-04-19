@@ -1,11 +1,15 @@
 // Para publicar una noticia con documento adjunto:
 // imagen: "ruta/imagen.jpg", documento: "ruta/archivo.pdf" o "ruta/archivo.docx".
+// Para varios adjuntos use documentos: ["ruta/archivo.docx", "ruta/archivo.pdf"].
 // Si no hay imagen, tambien puede usarse imagen: "ruta/documento.pdf".
 const noticias = [
   {
     id: "news-68",
     imagen: "img/news/WhatsApp Image 2026-04-17 at 14.41.26.jpeg",
-    documento: "img/news/CR 0222026 Agencia de Viajes Anticipate Abr 2026.docx",
+    documentos: [
+      "img/news/CR 0222026 Agencia de Viajes Anticipate Abr 2026.docx",
+      "img/news/Campaña Emisiva Abril 2026.pdf",
+    ],
     titulo: "OFERTAS hoteles DECAMERON",
     tituloSidebar: "OFERTAS hoteles DECAMERON",
     fecha: "17 Abril, 2026",
