@@ -31,9 +31,11 @@ function obtenerDocumentosNoticia(noticia = {}) {
 }
 
 function resolverRutaMedia(url = "", prefijo = "") {
-  if (/^(?:https?:)?\/\//i.test(url) || url.startsWith("/")) return url;
+  const ruta = /^(?:https?:)?\/\//i.test(url) || url.startsWith("/")
+    ? url
+    : `${prefijo}${url}`;
 
-  return `${prefijo}${url}`;
+  return encodeURI(ruta);
 }
 
 function renderMediaDetalle(noticia = {}) {

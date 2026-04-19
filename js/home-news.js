@@ -10,8 +10,13 @@ function obtenerMediaInicio(noticia = {}) {
   return { url, esPdf, esWord };
 }
 
+function codificarRutaMediaInicio(url = "") {
+  return encodeURI(url);
+}
+
 function renderMediaInicio(noticia = {}) {
   const media = obtenerMediaInicio(noticia);
+  const url = codificarRutaMediaInicio(media.url);
 
   if (!media.url) return "";
 
@@ -35,7 +40,7 @@ function renderMediaInicio(noticia = {}) {
   return `
     <img
       class="img-fluid"
-      src="${media.url}"
+      src="${url}"
       alt="${noticia.titulo}"
       loading="lazy"
     />

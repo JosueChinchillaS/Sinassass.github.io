@@ -8,7 +8,7 @@ const noticias = [
     imagen: "img/news/WhatsApp Image 2026-04-17 at 14.41.26.jpeg",
     documentos: [
       "img/news/CR 0222026 Agencia de Viajes Anticipate Abr 2026.docx",
-      "img/news/Campaña Emisiva Abril 2026.pdf",
+      "img/news/campana-emisiva-abril-2026.pdf",
     ],
     titulo: "OFERTAS hoteles DECAMERON",
     tituloSidebar: "OFERTAS hoteles DECAMERON",

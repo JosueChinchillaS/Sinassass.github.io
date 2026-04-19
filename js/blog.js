@@ -10,22 +10,27 @@ function obtenerMediaNoticia(noticia = {}) {
   return { url, esPdf, esWord };
 }
 
+function codificarRutaMedia(url = "") {
+  return encodeURI(url);
+}
+
 function renderMediaNoticia(noticia = {}) {
   const media = obtenerMediaNoticia(noticia);
+  const url = codificarRutaMedia(media.url);
 
   if (!media.url) return "";
 
   if (media.esPdf) {
     return `
       <object
-        data="${media.url}#toolbar=0&navpanes=0&scrollbar=0"
+        data="${url}#toolbar=0&navpanes=0&scrollbar=0"
         type="application/pdf"
         class="w-100"
         style="height: 260px"
         aria-label="${noticia.titulo}"
       >
         <div class="d-flex align-items-center justify-content-center bg-white text-center p-4" style="height: 260px">
-          <a class="btn btn-primary" href="${media.url}" target="_blank" rel="noopener">
+          <a class="btn btn-primary" href="${url}" target="_blank" rel="noopener">
             Ver PDF
           </a>
         </div>
@@ -36,7 +41,7 @@ function renderMediaNoticia(noticia = {}) {
   if (media.esWord) {
     return `
       <a
-        href="${media.url}"
+        href="${url}"
         target="_blank"
         rel="noopener"
         class="d-flex flex-column align-items-center justify-content-center bg-white text-primary text-center p-4"
@@ -52,7 +57,7 @@ function renderMediaNoticia(noticia = {}) {
   return `
     <img
       class="img-fluid"
-      src="${media.url}"
+      src="${url}"
       alt="${noticia.titulo}"
       loading="lazy"
     />
@@ -61,6 +66,7 @@ function renderMediaNoticia(noticia = {}) {
 
 function renderMiniaturaNoticia(noticia = {}) {
   const media = obtenerMediaNoticia(noticia);
+  const url = codificarRutaMedia(media.url);
 
   if (!media.url) return "";
 
@@ -93,7 +99,7 @@ function renderMiniaturaNoticia(noticia = {}) {
   return `
     <img
       class="img-fluid"
-      src="${media.url}"
+      src="${url}"
       style="width: 100px; height: 100px; object-fit: cover"
       alt="${noticia.titulo}"
       loading="lazy"
